@@ -13,9 +13,6 @@ turistas = {
         "011": {"Nombre": "Sofia Gomez", "Pais": "Argentina", "Fecha": "07-04-2024"},
     }
 
-def obtener_turistas():
-    return turistas
-
 
 def turistas_por_pais(pais):
 
