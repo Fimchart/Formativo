@@ -18,7 +18,7 @@ def obtener_turistas():
 
 
 def turistas_por_pais(pais):
-    turistas = obtener_turistas()
+
     encontrados = False
     for t in turistas.values():
         if t["Pais"].lower() == pais.lower():
@@ -30,7 +30,6 @@ def turistas_por_pais(pais):
 
 
 def turistas_por_mes(mes):
-    turistas = obtener_turistas()
     total = len(turistas)
     contador = 0
 
