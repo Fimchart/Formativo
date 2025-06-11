@@ -15,7 +15,6 @@ turistas = {
 
 
 def turistas_por_pais(pais):
-
     encontrados = False
     for t in turistas.values():
         if t["Pais"].lower() == pais.lower():
@@ -29,7 +28,6 @@ def turistas_por_pais(pais):
 def turistas_por_mes(mes):
     total = len(turistas)
     contador = 0
-
     for t in turistas.values():
         fecha = t["Fecha"]
         mes_turista = int(fecha.split("-")[1])
@@ -37,7 +35,6 @@ def turistas_por_mes(mes):
             contador += 1
     if total == 0:
         return 0.0
-    
     porcentaje = (contador / total) * 100
     return round(porcentaje,1)
 
@@ -46,7 +43,6 @@ def eliminar_turista():
     global turistas
     nombre_eliminar = input("\nIngrese el nombre completo del turista a eliminar: ").strip().lower()
     eliminado = False
-
     for clave, datos in list(turistas.items()):
         if datos["Nombre"].lower() == nombre_eliminar:
             del turistas[clave]
